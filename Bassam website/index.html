@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Personal Portfolio Website Design Tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">حول</a>
+        <a href="#services">لتواصل بنا</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="images/home.png" alt="">
+        <h3> بسام <span>الوهباني</span> </h3>
+        <p> أنا <span class="typing-text"> بسام الوهباني </span> </p>
+        <a href="#about" class="btn">حول المهندس</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> حول <span>المهندس</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="images/Bassam.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3> اسمي هو <span> بسام الوهباني </span> </h3>
+            <p class="info"> عايش في مدينة تعز دولة اليمن وهنا  بعض التفاصيل عني </p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> العمر : </span> 22 </p>
+                    <p> <span> الجنس : </span> ذكر </p>
+                    <p> <span> خبرة : </span> مبتدى </p>
+                    <p> <span> تخصص : </span> برمجة حاسوب </p>
+                </div>
+                <div class="box">
+                    <p> <span> اللغة : </span> عربي / انجليزي </p>
+                    <p> <span> الهاتف :  </span> 00967775677807 </p>
+                    <p> <span> البريد :  </span> bassam126677@gmail.com </p>
+                    <p> <span> العنوان : </span> شارع التحرير ، تعز ، اليمن </p>
+                </div>
+            </div>
+            <a href="#" class="btn" id="btn1">الانتقال الى أعلى</a> </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span> ل </span> تواصل بنا </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <h3>الفيسبوك</h3>
+            <p>لتواصل عبر الفيسبوك اضغط الرابط التالي </p>
+  <p> 👇🏻👇🏻👇🏻👇🏻👇🏻 </p>
+<p> 
+<a href=" https://www.facebook.com/bassamalwahbany"> موقع فيسبوك </a> </p> 
+ </div>
+
+        <div class="box tilt">
+            <h3>الإنستغرام</h3>
+            <p>لتواصل على الانستغرام اضغط الرابط التالي</p>
+        <p> 👇🏻👇🏻👇🏻👇🏻👇🏻 </p>
+<p> 
+<a href="https://instagram.com/bassamalwahbany?igshid=YmMyMTA2M2Y"> موقع إنستغرام </a> </p> 
+ </div>
+
+        <div class="box tilt">
+            <h3>اليوتيوب</h3>
+            <p>موقعنا على اليوتيوب</p>
+  <p> 👇🏻👇🏻👇🏻👇🏻👇🏻 </p>
+<p> 
+<a href="https://youtube.com/channel/UCW0QXg1wbcr7geVV64zYS4w"> موقع اليوتيوب </a> </p> 
+ </div>
+      
+
+       
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+<div class="footer"> المهندس : <span>بسام حيدر الوهباني  </span> | جميع الحقوق محفوظة </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['بسام الوهباني', 'مبرمج حاسوب', 'مهندس تقنية معلومات', 'مطور مواقع'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+</body>
+</html>
